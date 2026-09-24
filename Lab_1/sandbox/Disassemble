@@ -1,0 +1,42 @@
+
+Новикова:     file format elf32-i386
+
+
+This GDB supports auto-downloading debuginfo from the following URLs:
+  <https://debuginfod.ubuntu.com>
+Enable debuginfod for this session? (y or [n]) [answered N; input not from terminal]
+Debuginfod has been disabled.
+To make this setting permanent, add 'set debuginfod enabled off' to .gdbinit.
+Dump of assembler code for function main:
+   0x0000118d <+0>:	lea    0x4(%esp),%ecx
+   0x00001191 <+4>:	and    $0xfffffff0,%esp
+   0x00001194 <+7>:	push   -0x4(%ecx)
+   0x00001197 <+10>:	push   %ebp
+   0x00001198 <+11>:	mov    %esp,%ebp
+   0x0000119a <+13>:	push   %ebx
+   0x0000119b <+14>:	push   %ecx
+   0x0000119c <+15>:	call   0x1090 <__x86.get_pc_thunk.bx>
+   0x000011a1 <+20>:	add    $0x2e37,%ebx
+   0x000011a7 <+26>:	sub    $0xc,%esp
+   0x000011aa <+29>:	lea    -0x1fd0(%ebx),%eax
+   0x000011b0 <+35>:	push   %eax
+   0x000011b1 <+36>:	call   0x1040 <puts@plt>
+   0x000011b6 <+41>:	add    $0x10,%esp
+   0x000011b9 <+44>:	sub    $0xc,%esp
+   0x000011bc <+47>:	lea    -0x1fbf(%ebx),%eax
+   0x000011c2 <+53>:	push   %eax
+   0x000011c3 <+54>:	call   0x1040 <puts@plt>
+   0x000011c8 <+59>:	add    $0x10,%esp
+   0x000011cb <+62>:	sub    $0xc,%esp
+   0x000011ce <+65>:	lea    -0x1fb8(%ebx),%eax
+   0x000011d4 <+71>:	push   %eax
+   0x000011d5 <+72>:	call   0x1040 <puts@plt>
+   0x000011da <+77>:	add    $0x10,%esp
+   0x000011dd <+80>:	mov    $0x0,%eax
+   0x000011e2 <+85>:	lea    -0x8(%ebp),%esp
+   0x000011e5 <+88>:	pop    %ecx
+   0x000011e6 <+89>:	pop    %ebx
+   0x000011e7 <+90>:	pop    %ebp
+   0x000011e8 <+91>:	lea    -0x4(%ecx),%esp
+   0x000011eb <+94>:	ret
+End of assembler dump.
