@@ -13,23 +13,24 @@ _start:
     # RSI указывает на последний символ строки
     lea rsi, str + len - 1
 
-    # RCX содержит количество символов
-    mov rcx, len
+    # R8 = количество символов
+    mov r8, len
 
 print_loop:
-    # Вывод одного символа
-    mov rax, 1          # syscall write
+    # Системный вызов write
+    mov rax, 1          # номер системного вызова write
     mov rdi, 1          # stdout
-    mov rdx, 1          # количество байт
+    mov rdx, 1          # количество выводимых байт
     syscall
 
     # Переходим к предыдущему символу
     dec rsi
 
-    # Повторяем, пока не выведем всю строку
-    loop print_loop
+    # Уменьшаем счётчик
+    dec r8
+    jnz print_loop
 
-    # Завершение программы
-    mov rax, 60         # syscall exit
-    xor rdi, rdi
+    # Завершаем программу
+    mov rax, 60         # номер системного вызова exit
+    xor rdi, rdi        # код возврата 0
     syscall
