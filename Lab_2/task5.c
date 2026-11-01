@@ -2,7 +2,7 @@
 
 int main(void)
 {
-    unsigned long long n = 5277616985ULL;
+    unsigned long long n = 3618218374ULL;
     unsigned int sum = 0;
 
     while (n > 0)
@@ -11,7 +11,7 @@ int main(void)
         n /= 10;
     }
 
-    printf("Sum = %u\n", sum);
+    printf("%u\n", sum);
 
     return 0;
 }
